@@ -3,7 +3,7 @@
 export function LocalDate({ date }: { date: Date }) {
   return (
     <>
-      {date.toLocaleString()}
+      {new Date(date).toLocaleString()}
     </>
   );
 }
