@@ -73,7 +73,7 @@ const demo: ScoreData = {
     id: 4379536,
     mode: 'taiko',
     version: 'e',
-    difficultyRating: 3.33253,
+    difficulty_rating: 3.33253,
     title: 'Calcium',
     beatmapset: {
       covers: {

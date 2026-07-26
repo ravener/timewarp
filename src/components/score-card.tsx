@@ -62,7 +62,7 @@ export function ScoreCard({ replay, beatmap }: ScoreCardProps) {
 
           <div className="flex items-center justify-center gap-1 text-[24px]">
             <span className="text-amber-400">☆</span>
-            <span>{beatmap.difficultyRating.toFixed(2)}</span>
+            <span>{beatmap.difficulty_rating.toFixed(2)}</span>
           </div>
 
           {/* Score */}
