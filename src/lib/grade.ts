@@ -17,6 +17,8 @@ export function getGrade({
   count50,
   totalHits,
 }: ScoreStats): Grade {
+  accuracy = accuracy * 100;
+  
   switch (rulesetId) {
     // osu!
     case 0: {
