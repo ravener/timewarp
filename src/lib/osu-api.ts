@@ -57,7 +57,7 @@ async function getAccessToken() {
   const expiresAt = Date.now() + (newToken.expires_in * 1000) - (60 * 1000); // Subtract 1 minute for safety
 
   cachedToken = { expiresAt, value: newToken.access_token };
-  await redis.set('oauth:access-token', cachedToken, { ex: newToken.expires_in - 60 });
+  await redis.set('oauth:access-token', JSON.stringify(cachedToken), { ex: newToken.expires_in - 60 });
 
   return newToken.access_token;
 }
