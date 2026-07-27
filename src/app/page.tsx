@@ -7,6 +7,7 @@ export default async function Home() {
             <p>Supports every mode except Standard Relax</p>  
           </section>
           <FileUpload />
+          <p className="mt-4 text-sm text-gray-400">Uploads expire after 3 days of being inactive</p>
       </main>
   );
 }
