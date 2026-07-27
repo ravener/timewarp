@@ -57,7 +57,7 @@ export function ScoreCard({ replay, beatmap }: ScoreCardProps) {
         {/* Center information */}
         <div className="mt-9 flex flex-col items-center">
           <h2 className="text-[28px] font-bold">
-            {beatmap.title} [{beatmap.version}]
+            {beatmap.beatmapset.title} [{beatmap.version}]
           </h2>
 
           <div className="flex items-center justify-center gap-1 text-[24px]">

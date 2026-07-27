@@ -74,8 +74,8 @@ const demo: ScoreData = {
     mode: 'taiko',
     version: 'e',
     difficulty_rating: 3.33253,
-    title: 'Calcium',
     beatmapset: {
+      title: 'Calcium',
       covers: {
         // cover: 'https://assets.ppy.sh/beatmaps/2108981/covers/cover.jpg',
         cover: 'https://assets.ppy.sh/beatmaps/2089714/covers/cover.jpg?1719143584'

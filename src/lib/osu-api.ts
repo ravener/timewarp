@@ -69,8 +69,8 @@ export interface Beatmap {
   mode: 'osu' | 'taiko' | 'fruits' | 'mania';
   version: string;
   difficulty_rating: number;
-  title: string;
   beatmapset: {
+    title: string;
     covers: {
       cover: string;
     }
@@ -98,8 +98,8 @@ export async function getBeatmapByHash(md5Hash: string) {
     mode: data.mode,
     version: data.version,
     difficulty_rating: data.difficulty_rating,
-    title: data.title,
     beatmapset: {
+      title: data.beatmapset.title,
       covers: {
         cover: data.beatmapset.covers.cover
       }
