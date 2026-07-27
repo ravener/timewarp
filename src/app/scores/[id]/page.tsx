@@ -110,7 +110,9 @@ export default async function ScorePage({ params }: { params: Promise<{ id: stri
   
   return (
     <>
-      <ScoreCard replay={score.replay} beatmap={score.beatmap} />
+      <a href={`https://osu.ppy.sh/b/${score.beatmap.id}`} target="_blank" rel="noopener noreferrer">
+       <ScoreCard replay={score.replay} beatmap={score.beatmap} />
+      </a>
       <InfoGrid replay={score.replay} />
       <Histogram data={score.replay.data} />
     </>
