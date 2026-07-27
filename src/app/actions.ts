@@ -28,12 +28,13 @@ export async function uploadReplay(formData: FormData): Promise<UploadResult> {
         const replay = await analyzeReplay(new Uint8Array(await file.arrayBuffer()));
         const beatmap = await getBeatmapByHash(replay.beatmapHash);
 
-        const key = `replay:${replay.replayId}`;
+        const id = await redis.incr('replay:id');
+        const key = `replay:${id}`;
         const value = JSON.stringify({ replay, beatmap });
         const ex = 60 * 60 * 24 * 3; // 3 days
         
         await redis.set(key, value, { ex });
-        return { success: true, id: replay.replayId };
+        return { success: true, id };
     } catch (err) {
         console.log(err);
         return { success: false, error: (err as Error).message };
